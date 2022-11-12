@@ -4,6 +4,11 @@ const User = require("../model/User");
 exports.getAllUsers = async (req, res) => {
   try {
     let users = await User.find();
+    if (users.length == 0)
+      return res.status(404).json({
+        success: false,
+        message: "No users were found"
+      })
     res.status(200).json({
       success: true,
       message: "users found"
