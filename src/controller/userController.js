@@ -1,6 +1,6 @@
 const User = require("../model/User");
 
-//get all users
+//get all users'
 exports.getAllUsers = async (req, res) => {
   try {
     let users = await User.find();
