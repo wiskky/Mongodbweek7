@@ -1,4 +1,0 @@
-PORT = 3000;
-
-HOST = "https://MONGODB.wiskky.repl.co";
-MONGO_DB_LOCAL = "mongo://https://MONGODB.wiskky.repl.co";

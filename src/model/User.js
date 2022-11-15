@@ -1,3 +1,4 @@
+
 const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema({
@@ -5,25 +6,25 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 3,
-    maxlength: 20,
+    maxlength: 20
   },
   email: {
     type: String,
     required: true,
     minlength: 3,
-    maxlength: 20,
+    maxlength: 20
   },
   age: {
     type: Number,
-    default: null,
+    default: null
   },
   isUser: {
     type: Boolean,
-    default: true,
+    default: true
   },
   isAdmin: {
     type: Boolean,
-    default: false,
+    default: false
   },
   isUser: {
     type: Boolean,
