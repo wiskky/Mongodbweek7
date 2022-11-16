@@ -2,19 +2,19 @@ const User = require("../model/User");
 
 
 //create todo
-exports.createTodo = asyn(req, res) => {
+exports.createTodo = async(req, res) => {
   try {
     let todo = await req.body;
     let created = await User.create(todo);
     if (!created)
       return res.status(400).json({
         success: false,
-        message: 'User created failed',
+        message: 'Todo created failed',
         error: error.message
       });
     return res.status(200).json({
       success: true,
-      message: 'User created successfully',
+      message: 'Todo created successfully',
       user: created
 
     });
@@ -36,7 +36,7 @@ exports.getAllTodo = async (req, res) => {
       return res.status(404).json({
         success: false,
         message: "No users were found"
-      })
+      });
     res.status(200).json({
       success: true,
       message: "Todo found"
