@@ -1,8 +1,8 @@
 
 const { Schema, model } = require("mongoose");
 
-const userSchema = new Schema({
-  username: {
+const todoSchema = new Schema({
+  todo: {
     type: String,
     required: true,
     minlength: 3,
@@ -14,28 +14,12 @@ const userSchema = new Schema({
     minlength: 3,
     maxlength: 20
   },
-  age: {
-    type: Number,
-    default: null
-  },
-  isUser: {
-    type: Boolean,
-    default: true
-  },
-  isAdmin: {
-    type: Boolean,
-    default: false
-  },
-  isUser: {
-    type: Boolean,
-    default: true
-  },
+  Date: {
+    type: Date
+  }
+  
+});
 
-},
-  { timestamps: true }
-
-);
-
-const userModel = model("users", userSchema);
+const userModel = model("todo", todoSchema);
 
 module.exports = userModel;
