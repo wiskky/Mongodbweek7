@@ -35,7 +35,8 @@ exports.getAllTodo = async (req, res) => {
     if (todo.length == 0)
       return res.status(404).json({
         success: false,
-        message: "No users were found"
+        message: "No todo is found",
+        error: error.message
       });
     res.status(200).json({
       success: true,
