@@ -2,23 +2,21 @@
 const { Schema, model } = require("mongoose");
 
 const todoSchema = new Schema({
-  todo: {
+  Todo: {
     type: String,
     required: true,
     minlength: 3,
     maxlength: 20
   },
-  email: {
+  Email: {
     type: String,
     required: true,
     minlength: 3,
-    maxlength: 20
-  },
-  Date: {
-    type: Date
-  }
-  
-});
+    maxlength: 50
+  }, 
+},
+{timestamps: true}
+);
 
 const userModel = model("todo", todoSchema);
 
