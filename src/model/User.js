@@ -18,6 +18,6 @@ const todoSchema = new Schema({
 {timestamps: true}
 );
 
-const userModel = model("todo", todoSchema);
+const todoModel = model("todo", todoSchema);
 
-module.exports = userModel;
+module.exports = todoModel;
