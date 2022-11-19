@@ -2,13 +2,13 @@
 const { Schema, model } = require("mongoose");
 
 const todoSchema = new Schema({
-  Todo: {
+  Title: {
     type: String,
     required: true,
     minlength: 3,
     maxlength: 20
   },
-  Email: {
+  Description: {
     type: String,
     required: true,
     minlength: 3,
